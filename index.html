@@ -534,11 +534,11 @@ function recordSearch(year, make, model, vehicleId, hasParts) {
 }
 
 function sendAlert(alert) {
-  // Send alert via EmailJS or similar — configured via admin settings
-  // For now, we log to console and expose via stats panel
-  console.warn("[Rider Service ALERT] No parts found:", alert);
-  // To wire up email: replace this with a fetch() to your notification endpoint
-  // fetch("/api/alert", { method: "POST", body: JSON.stringify(alert), headers: {"Content-Type":"application/json"} });
+  fetch("https://hook.eu1.make.com/sfgaxyvja8ktex4xyi6ux7pioxa98esb", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(alert)
+  }).catch(err => console.warn("[Rider Service ALERT] Failed to send alert:", err));
 }
 
 // ---- Populate year dropdown ----
