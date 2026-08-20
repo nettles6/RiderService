@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — Rider Service Supplies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #161616;
+    --surface2: #1f1f1f;
+    --border: #2a2a2a;
+    --accent: #e8521a;
+    --accent2: #f07840;
+    --text: #f0ede8;
+    --muted: #888;
+    --success: #3dba7a;
+    --warning: #f0a832;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ---- HEADER ---- */
+  header {
+    background: var(--surface);
+    border-bottom: 2px solid var(--accent);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .logo span { color: var(--accent); }
+  .logo-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: -4px;
+  }
+  .back-link {
+    color: var(--muted);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--accent); }
+
+  /* ---- PAGE HEAD ---- */
+  .page-head {
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1008 50%, #0d0d0d 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 1.5rem 2rem;
+    text-align: center;
+  }
+  .page-head h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.5rem;
+  }
+  .page-head .effective-date {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* ---- CONTENT ---- */
+  .terms-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+  .terms-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem;
+  }
+  @media (max-width: 640px) {
+    .terms-card { padding: 1.5rem; }
+  }
+
+  .terms-card h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-top: 2.25rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .terms-card h2:first-child { margin-top: 0; }
+  .terms-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    margin-top: 1.25rem;
+    margin-bottom: 0.6rem;
+  }
+  .terms-card p {
+    color: #d6d2cb;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 0.85rem;
+  }
+  .terms-card ul {
+    margin: 0 0 0.85rem 1.25rem;
+    color: #d6d2cb;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  .terms-card li { margin-bottom: 0.35rem; }
+  .terms-card a { color: var(--accent2); }
+  .terms-card strong { color: var(--text); font-weight: 500; }
+
+  .notice-box {
+    margin-top: 2.5rem;
+    background: rgba(240,168,50,0.08);
+    border: 1px solid rgba(240,168,50,0.3);
+    border-left: 3px solid var(--warning);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+  }
+  .notice-box .notice-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--warning);
+    margin-bottom: 0.5rem;
+  }
+  .notice-box p { margin-bottom: 0; color: #d6d2cb; }
+
+  .last-updated {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  footer .footer-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  footer .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer a {
+    color: var(--muted);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  footer a:hover { color: var(--accent); }
+  footer .footer-copy {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-family: 'Barlow', sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo" style="text-decoration:none;">
+    <div>Rider <span>Service Supplies</span></div>
+    <span class="logo-sub">Motorcycle Parts Finder</span>
+  </a>
+  <a href="index.html" class="back-link">&larr; Back to Search</a>
+</header>
+
+<section class="page-head">
+  <h1>Terms &amp; Conditions</h1>
+  <div class="effective-date">Effective Date: 20/08/2026</div>
+</section>
+
+<div class="terms-wrap">
+  <div class="terms-card">
+
+    <p>By accessing and using the Rider Service Supplies website located at riderservice.com.au (the "Website"), you accept and agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, you must not use the Website.</p>
+    <p>These Terms constitute a legally binding agreement between you and Rider Service Supplies ("we", "us", "our") governing your use of the Website and the parts compatibility information and services provided through it.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing and using the Website, you accept and agree to be bound by these Terms. If you do not agree, you must not use the Website.</p>
+
+    <h2>2. Description of Service</h2>
+    <p>The Website provides a motorcycle parts compatibility reference tool that allows users to search for service parts — including oil filters, air filters, fuel filters, spark plugs, brake pads and related components — that may be compatible with specific motorcycle makes and models.</p>
+    <p>The information provided is intended as a general reference guide only. The Website does not sell parts directly and is not a substitute for professional mechanical advice.</p>
+
+    <h2>3. Eligibility and Capacity</h2>
+    <p>By using the Website, you represent that you have the legal capacity to enter into a binding agreement. If you are using the Website on behalf of a business or other entity, you represent that you are authorised to bind that entity to these Terms.</p>
+    <p>The Website is not directed at children. If you are under the age of 18, you may only use the Website with the involvement and consent of a parent or guardian.</p>
+
+    <h2>4. Data Accuracy and Parts Compatibility Disclaimer</h2>
+    <h3>4.1 General Accuracy</h3>
+    <p>While we make reasonable efforts to ensure the accuracy of parts compatibility information on the Website, we do not warrant or guarantee that:</p>
+    <ul>
+      <li>all information is complete, current, accurate or error-free;</li>
+      <li>parts listed as compatible will be suitable for your specific vehicle in all circumstances;</li>
+      <li>compatibility data covers all vehicle variants, model years, or regional specifications;</li>
+      <li>the information reflects the most current product lines or part number changes from manufacturers.</li>
+    </ul>
+    <p>While reasonable efforts are taken to maintain the security of the Website, Rider Service Supplies does not guarantee that the Website, its servers, or any data transmitted through it will be free from viruses, malware, or other harmful components.</p>
+
+    <h3>4.2 User Responsibility</h3>
+    <p>You are solely responsible for verifying parts compatibility before purchasing or installing any part. We strongly recommend that you:</p>
+    <ul>
+      <li>consult your vehicle's owner manual or service documentation;</li>
+      <li>verify compatibility directly with the parts manufacturer or supplier;</li>
+      <li>seek advice from a qualified motorcycle mechanic before purchasing or installing parts.</li>
+    </ul>
+
+    <h2>5. Availability of the Website</h2>
+    <p>The Website is provided on an "as is" and "as available" basis. We do not warrant that the Website will be available at all times, uninterrupted, secure, or free of defects, and we may suspend, withdraw, or restrict availability of all or part of the Website for business or operational reasons at any time, without notice.</p>
+    <p>We do not guarantee any particular level of performance, response time, or continued provision of any feature of the Website, and reserve the right to discontinue the Website, or any part of it, permanently.</p>
+
+    <h2>6. Limitation of Liability and No Liability for Incorrect Fitment</h2>
+    <h3>6.1 No Liability for Incorrect Fitment</h3>
+    <p>To the maximum extent permitted by law, Rider Service Supplies expressly disclaims all liability for any loss, damage, injury, cost or expense arising directly or indirectly from:</p>
+    <ul>
+      <li>the installation of any part based on compatibility information obtained from the Website;</li>
+      <li>incorrect fitment of parts to your motorcycle or other vehicle;</li>
+      <li>mechanical failure, personal injury, property damage, or any consequential loss resulting from reliance on the Website's compatibility data;</li>
+      <li>any error, omission, or inaccuracy in the parts compatibility information.</li>
+    </ul>
+    <p>The information provided on the Website is general information only and does not constitute mechanical, engineering, technical or professional advice. Users should obtain independent advice before relying on any information.</p>
+
+    <h3>6.2 Australian Consumer Law</h3>
+    <p>Nothing in these Terms limits or excludes any guarantee, right or remedy that cannot be limited or excluded under the Australian Consumer Law (Schedule 2 of the Competition and Consumer Act 2010 (Cth)) ("ACL"). To the extent permitted by the ACL, our liability for any breach of a non-excludable guarantee is limited, at our option, to re-supplying the service or paying the cost of having the service re-supplied.</p>
+
+    <h3>6.3 General Limitation</h3>
+    <p>To the maximum extent permitted by law, Rider Service Supplies shall not be liable for any indirect, consequential, special or incidental loss. Any liability that cannot be excluded is limited to AUD $100 or the cost of re-supplying the service, whichever is less.</p>
+    <p>If any part of this section 6 is found by a court or tribunal to be unenforceable, that finding does not affect the enforceability of the remainder of this section or of these Terms — see section 15.1 (Severability).</p>
+
+    <h2>7. Indemnity</h2>
+    <p>To the maximum extent permitted by law, you agree to indemnify, defend and hold harmless Rider Service Supplies, its owners, officers, employees and agents from and against any claims, liabilities, damages, losses, costs and expenses (including reasonable legal fees) arising out of or in any way connected with:</p>
+    <ul>
+      <li>your use of, or reliance on, the Website or any information obtained from it;</li>
+      <li>your breach of these Terms;</li>
+      <li>your violation of any law or the rights of a third party in connection with your use of the Website; or</li>
+      <li>any unauthorised scraping, extraction, harvesting or reproduction of Website content or data by you or on your behalf.</li>
+    </ul>
+    <p>This indemnity does not apply to the extent a claim arises from our own fraud, wilful misconduct, or a liability that cannot lawfully be excluded, such as certain guarantees under the ACL.</p>
+
+    <h2>8. Intellectual Property and Data Protection</h2>
+    <h3>8.1 Ownership</h3>
+    <p>All content on the Website, including but not limited to the parts compatibility database, vehicle listings, data tables, design, layout, text, graphics and code, is the intellectual property of Rider Service Supplies or its data suppliers and is protected by Australian copyright law and applicable international intellectual property laws.</p>
+
+    <h3>8.2 Permitted Use</h3>
+    <p>You may access and use the Website for personal, non-commercial reference purposes only. You must not:</p>
+    <ul>
+      <li>reproduce, copy, distribute, sell or commercially exploit any part of the Website or its data;</li>
+      <li>systematically extract, scrape, crawl, or download any content or data from the Website, whether by automated means or otherwise;</li>
+      <li>use any robot, spider, scraper, data mining tool, or other automated device to access, collect or index any data from the Website;</li>
+      <li>frame or mirror the Website on any other website or platform without prior written consent;</li>
+      <li>reverse engineer or attempt to extract the underlying database structure or data in bulk.</li>
+    </ul>
+    <p>Any unauthorised scraping, extraction, harvesting or reproduction of Website data may result in legal action, including claims for damages and injunctive relief.</p>
+
+    <h3>8.3 Data Suppliers</h3>
+    <p>Certain parts data and product information displayed on the Website is sourced from third-party manufacturers and suppliers. All trade marks and brand names remain the property of their respective owners. Reference to any brand or product does not imply endorsement of the Website by that brand or manufacturer. Rider Service Supplies does not independently test or verify fitment of parts for every vehicle listed.</p>
+    <p>Compatibility information is provided on the assumption that the vehicle remains in substantially original manufacturer specification. We do not warrant compatibility for modified, imported, customised, competition, race-use, or non-standard vehicles.</p>
+
+    <h2>9. Privacy Policy and Search Analytics</h2>
+    <h3>9.1 Data We Collect</h3>
+    <p>When you use the Website's search function, the following information may be collected and stored:</p>
+    <ul>
+      <li>your search selections (make, model) and the date and time of your search;</li>
+      <li>whether your search returned compatible parts results;</li>
+      <li>general website usage analytics including page visits and session data.</li>
+    </ul>
+
+    <h3>9.2 How We Use This Data</h3>
+    <p>Search data is used solely for the following purposes:</p>
+    <ul>
+      <li>to identify gaps in our parts compatibility database and prioritise data updates;</li>
+      <li>to improve the accuracy and coverage of the Website;</li>
+      <li>to analyse general usage patterns and improve user experience.</li>
+    </ul>
+
+    <h3>9.3 Local Storage</h3>
+    <p>The Website uses your browser's local storage to record search history and analytics data on your device. This data is stored locally on your device and is not transmitted to our servers unless you take a specific action to submit it. You may clear this data at any time by clearing your browser's local storage or site data.</p>
+
+    <h3>9.4 No Personal Information</h3>
+    <p>The Website does not require you to create an account or provide personal identifying information to use the search function. We do not collect your name, email address, postal address, or payment information through normal use of the Website.</p>
+
+    <h3>9.5 Third-Party Analytics</h3>
+    <p>The Website may use third-party analytics tools (such as Cloudflare Web Analytics) which may collect anonymised usage data in accordance with their own privacy policies. We encourage you to review the privacy policies of any third-party services accessible through the Website.</p>
+
+    <h3>9.6 Australian Privacy Principles and Data Breach Notification</h3>
+    <p>We handle personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles where applicable. Where we are subject to the Notifiable Data Breaches scheme under Part IIIC of the Privacy Act 1988 (Cth), we will notify affected individuals and the Office of the Australian Information Commissioner of any eligible data breach in accordance with that scheme. For any privacy-related enquiries, please contact us using the details in section 16.</p>
+
+    <h2>10. Prohibited Use</h2>
+    <p>You must not use the Website for any unlawful purpose or in any way that violates these Terms. Prohibited conduct includes:</p>
+    <ul>
+      <li>using the Website in any way that could damage, disable, overburden or impair it;</li>
+      <li>attempting to gain unauthorised access to any part of the Website or its systems;</li>
+      <li>introducing viruses, malware or other harmful code;</li>
+      <li>scraping, harvesting or bulk downloading data from the Website;</li>
+      <li>reselling or commercially exploiting data obtained from the Website.</li>
+    </ul>
+
+    <h2>11. Third-Party Links and Products</h2>
+    <p>The Website may contain references to third-party products, brand names, or external websites. These references are provided for informational purposes only. We do not endorse, warrant or assume responsibility for any third-party products, services, or websites. Your dealings with third parties are solely between you and that third party.</p>
+
+    <h2>12. Suspension and Termination</h2>
+    <p>We reserve the right to suspend, restrict or terminate your access to the Website at any time, without notice, where we reasonably believe you have breached these Terms or are misusing the Website, or for any operational or business reason.</p>
+    <p>Sections of these Terms that by their nature are intended to survive termination — including sections 6 (Limitation of Liability), 7 (Indemnity), 8 (Intellectual Property and Data Protection), 15 (General Provisions) and 17 (Governing Law) — continue to apply after your access to the Website ends.</p>
+
+    <h2>13. Dispute Resolution</h2>
+    <p>If a dispute arises out of or in connection with these Terms or your use of the Website, the parties agree to first attempt to resolve the dispute in good faith by contacting the other party in writing and allowing a reasonable opportunity (at least 20 business days) to respond and resolve the issue before commencing court proceedings.</p>
+    <p>This section does not prevent either party from seeking urgent injunctive or interlocutory relief at any time, and does not limit any right you have to make a complaint to a regulator, including the Australian Competition and Consumer Commission or the Office of the Australian Information Commissioner.</p>
+
+    <h2>14. Changes to These Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. Changes will be effective upon posting to the Website with an updated effective date. Your continued use of the Website after any changes constitutes your acceptance of the revised Terms. We recommend reviewing these Terms periodically.</p>
+
+    <h2>15. General Provisions</h2>
+    <h3>15.1 Severability</h3>
+    <p>If any provision of these Terms is held by a court or tribunal of competent jurisdiction to be invalid, illegal or unenforceable, that provision will be severed and the remaining provisions will continue in full force and effect as if the invalid, illegal or unenforceable provision had never been included.</p>
+
+    <h3>15.2 Entire Agreement</h3>
+    <p>These Terms constitute the entire agreement between you and Rider Service Supplies in relation to your use of the Website and supersede all prior understandings, representations and agreements, whether written or oral, relating to that subject matter.</p>
+
+    <h3>15.3 No Waiver</h3>
+    <p>A failure or delay by Rider Service Supplies in exercising any right, power or remedy under these Terms does not operate as a waiver of that right, power or remedy. A waiver is only effective if given in writing.</p>
+
+    <h3>15.4 Assignment</h3>
+    <p>You may not assign or transfer your rights or obligations under these Terms without our prior written consent. We may assign or transfer our rights and obligations under these Terms without restriction, including in connection with a sale, merger or transfer of the business.</p>
+
+    <h2>16. Contact Us</h2>
+    <p>If you have any questions, concerns or complaints regarding these Terms or the Website, please contact us at:</p>
+    <p><strong>Rider Service Supplies</strong><br>Email: <a href="mailto:riderservicesupplies@gmail.com">riderservicesupplies@gmail.com</a></p>
+
+    <h2>17. Governing Law</h2>
+    <p>These Terms are governed by the laws of Queensland, Australia. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of Queensland and courts of appeal from them. Nothing in these Terms affects your rights as a consumer under Australian Consumer Law.</p>
+
+    <div class="notice-box">
+      <div class="notice-title">Important Notice</div>
+      <p>Parts compatibility information on this Website is provided as a general reference guide only. Always verify fitment with a qualified mechanic or the parts manufacturer before purchasing or installing any part. Rider Service Supplies accepts no responsibility for loss or damage resulting from incorrect fitment.</p>
+    </div>
+
+    <div class="last-updated">These Terms and Conditions were last updated on 20th August 2026.</div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Parts Finder</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </div>
+    <div class="footer-copy">&copy; <span id="footer-year"></span> Rider Service Supplies</div>
+  </div>
+</footer>
+
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
