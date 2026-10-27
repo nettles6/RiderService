@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /trap
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://riderservicesupplies.com.au/sitemap.xml
