@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /trap
+Disallow: /api/signal
 
 Sitemap: https://riderservicesupplies.com.au/sitemap.xml
